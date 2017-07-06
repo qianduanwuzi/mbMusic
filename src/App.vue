@@ -2,7 +2,9 @@
   <div id="app">
     <Mheader></Mheader>
     <Tab></Tab>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
@@ -11,7 +13,7 @@ import Mheader from "components/m-header/m-header";
 import Tab from "components/tab/tab";
 
 export default {
-  components: {Mheader, Tab}
+  components: { Mheader, Tab }
 }
 </script>
 
@@ -20,9 +22,11 @@ export default {
 
   #app 
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     color: #FFC1C1;
     margin-top: 60px;
-  
+    width: 100%;
+    box-sizing border-box
+    overflow hidden
+  html
+    font-size: 20px
 </style>

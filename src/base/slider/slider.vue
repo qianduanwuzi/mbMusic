@@ -46,13 +46,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .slider {
     min-height: 1px;
 }
 
 .slider-group {
-    position: relative;
+    /*position: relative;*/
     overflow: hidden;
     white-space: nowrap;
 }

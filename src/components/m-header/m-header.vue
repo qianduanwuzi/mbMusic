@@ -11,15 +11,17 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
 .m-header {
     position: relative;
-    height: 50px;
-    line-height: 50px;
+    /*height: 50px;*/
+    /*line-height: 50px;*/
     text-align: center;
     display: flex;
-    width: 155px;
-    margin: auto;
+    /*width: 9.05rem;*/
+    justify-content: center;
+    align-items: center;
+    /*margin: auto;*/
     /*color: */
 }
 .logo{
@@ -30,7 +32,7 @@ export default {
     height: 50px;
 }
 .text {
-    display: inline-block
+    /*display: inline-block*/
 }
 </style>
 
