@@ -29,7 +29,6 @@ var app = express()
 var apiRoutes = express.Router()
 
 apiRoutes.get('/getDiscList', function (req, res) {
-  console.log('123123--->', req.query)
   var url = 'https://c.y.qq.com/splcloud/fcgi-bin/fcg_get_diss_by_tag.fcg';
   axios.get(url, {
     headers: {
@@ -37,7 +36,6 @@ apiRoutes.get('/getDiscList', function (req, res) {
     },
     params: req.query
   }).then((response) => {
-    console.log('res====>', response)
     res.json(response.data)
   }).catch((err) => {
     console.log(err)
