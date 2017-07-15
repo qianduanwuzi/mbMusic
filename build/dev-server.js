@@ -42,6 +42,18 @@ apiRoutes.get('/getDiscList', function (req, res) {
   })
 })
 
+apiRoutes.get('/getSingerList', function (req, res) {
+  var url = "https://c.y.qq.com/v8/fcg-bin/v8.fcg";
+  axios.get(url, {
+    headers: {
+      referer: 'https://y.qq.com/portal/singer_list.html'
+    },
+    params: req.query
+  })
+  .then(response => res.json(response.data))
+  .catch(err => console.log(err))
+})
+
 app.use('/api', apiRoutes)
 
 var compiler = webpack(webpackConfig)

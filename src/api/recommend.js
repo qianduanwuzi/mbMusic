@@ -29,9 +29,29 @@ export function getDiscList() {
         format: 'json'
     })
 
-    return axios.get(url, {params: data}).then((res) => {
+    return axios.get(url, { params: data }).then((res) => {
         console.log(res)
         return Promise.resolve(res.data)
     })
+
+}
+
+export function getSingerList() {
+    const url = '/api/getSingerList'
+
+    const data = Object.assign({}, commonParams, {
+        channel: 'singer',
+        page: 'list',
+        key: 'all_all_all',
+        pagesize: 100,
+        pagenum: 1,
+        loginUin: 0,
+        hostUin: 0,
+        platform: 'yqq',
+        needNewCode: 0,
+    })
+
+    return axios.get(url, {params: data}).then( res => res.data)
+
 
 }
